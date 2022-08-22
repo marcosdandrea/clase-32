@@ -7,7 +7,7 @@
     "test": "nodemon main.js",
     "profiler": "node --prof main.js",
     "autocannon": "node autocannon.js",
-    "start": "main.js"
+    "start": "node main.js"
 
   },
   "keywords": [],
