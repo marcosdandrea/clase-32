@@ -4,7 +4,7 @@ const http = require("http")
 const cluster = require("cluster")
 const numCPUs = require("os").cpus().length
 const argv = require('minimist')(process.argv.slice(2));
-const PORT = argv.port || 8081;
+const PORT = process.env.PORT || 8080;
 const processMode = argv.mode || "fork"
 const Logger = require("./scripts/Logger")
 require("dotenv").config()
