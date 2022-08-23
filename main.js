@@ -60,6 +60,7 @@ app.use(passport.session())
 
 app.use((error, req, res, next) => {
     logger.logWarn(req)
+    console.log ("este es el error", error.message)
     res.status(500).send(error.message)
 })
     
