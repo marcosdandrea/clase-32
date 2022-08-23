@@ -1,7 +1,7 @@
 let socket = io()
 let messagesTemplates
 
-fetch("http://localhost:8080/template/messages.hbs")
+fetch("/template/messages.hbs")
     .then(res => res.text())
     .then(baseTemplate => {
         messagesTemplates = Handlebars.compile(baseTemplate)
