@@ -45,7 +45,7 @@ function getCookie(cname, raw) {
 
 function checkSession() {
     user = JSON.parse(getCookie("user", false))
-    user.profilePic = "http://localhost:8080/images/profiles/" + user.profilePic
+    user.profilePic = "/images/profiles/" + user.profilePic
     const welcomeMsg = "Bienvenido " + user.alias
     document.querySelector("#welcome").textContent = welcomeMsg.toUpperCase()
 

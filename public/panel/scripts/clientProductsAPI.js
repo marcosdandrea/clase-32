@@ -2,7 +2,7 @@ let productTemplates
 let retryCount = 0;
 
 const fetchRetry = setInterval(()=>{
-fetch("http://localhost:8080/template/products.hbs")
+fetch("/template/products.hbs")
     .then(res => res.text())
     .then(baseTemplate => {
         productTemplates = Handlebars.compile(baseTemplate)
@@ -38,7 +38,7 @@ const sendProduct = () => {
 }
 
 const getProducts = () => {
-    fetch("http://localhost:8080/products/")
+    fetch("/products")
         .then(response => {
             if (response.status != 200) {
                 console.log(response)
